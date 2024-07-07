@@ -12,7 +12,7 @@ INSERT INTO `creature_template` (`entry`,  `name`, `subname`, `IconName`, `gossi
 -- NPC MODEL
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @NpcEntry;
 INSERT INTO `creature_template_model` (`CreatureID`, `Idx`, `CreatureDisplayID`, `DisplayScale`, `Probability`, `VerifiedBuild`) VALUES
-(@Entry, 0, @NpcDisplayID, 1, 1, 0);
+(@NpcEntry, 0, @NpcDisplayID, 1, 1, 0);
 
 DELETE FROM `npc_text` WHERE `ID` = @NpcEntry;
 INSERT INTO `npc_text` (`ID`, `text0_0`, `text0_1`) VALUES
