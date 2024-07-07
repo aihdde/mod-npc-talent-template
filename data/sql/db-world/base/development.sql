@@ -10,7 +10,7 @@ INSERT INTO `creature_template` (`entry`,  `name`, `subname`, `IconName`, `gossi
 (@NpcEntry, @NpcName, @NpcSubname, "Speak", 0, 80, 80, 35, 1, 1, 1.14286, 1, 0, 1, 2, 7, 138936390, 1, 2, "TemplateNPC");
 
 -- NPC MODEL
-DELETE FROM `creature_template_model` WHERE `CreatureID` = @Entry;
+DELETE FROM `creature_template_model` WHERE `CreatureID` = @NpcEntry;
 INSERT INTO `creature_template_model` (`CreatureID`, `Idx`, `CreatureDisplayID`, `DisplayScale`, `Probability`, `VerifiedBuild`) VALUES
 (@Entry, 0, @NpcDisplayID, 1, 1, 0);
 
